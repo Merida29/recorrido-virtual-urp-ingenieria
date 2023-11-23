@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes con Autoplay</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Estilos del header */
+        header {
+            background-color: #28a745;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img.logo {
+            max-width: 150px;
+            height: auto;
+            margin-right: auto;
+        }
+
+        header img.right-img {
+            max-width: 100px;
+            height: auto;
+            margin-left: auto;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 70%; 
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            background-color: #28a745;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #218838;
+        }
+        /* Estilos del contenido principal */
+        .main-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        /* Estilos del footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Estilos de las secciones */
+        section {
+            text-align: center;
+            padding: 30px 0;
+        }
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        section .bold-green {
+            font-weight: bold;
+            color: #28a745;
+        }
+        /* Imágenes centradas */
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="file:///C:/Users/USUARIO/Desktop/Recorrido%20Urp.html">
+            <img src="fotos/LOGO.png" alt="Logo de la URP" class="logo">
+        </a>
+        <h1 style="flex-grow: 1; text-align: center; margin: 0;">Recorrido Virtual en la URP</h1>
+        <img src="Fotos/54.png" alt="Imagen derecha" class="right-img" style="max-width: 100px; height: auto;">
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#facultad">Facultad</a>
+        <a href="#instalaciones">Instalaciones</a>
+        <a href="#Tour">Tour Virtual</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="main-content">
+        <section id="inicio" style="position: relative; overflow: hidden;">
+            <div class="swiper-container" style="max-width: 100%; margin: 0 auto;">
+                <div class="swiper-wrapper">
+                    <!-- Imágenes en cada diapositiva -->
+                    <div class="swiper-slide" style="position: relative;">
+                        <img src="Fotos/QR.png" alt="Imagen 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="swiper-slide" style="position: relative;">
+                        <img src="Fotos/vista.jpeg" alt="Imagen 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="swiper-slide" style="position: relative;">
+                        <img src="Fotos/chicos.jpeg" alt="Imagen 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);"></div>
+                <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);"></div>
+            </div>
+        </section>
+        <section id="nosotros">
+            <h2>¡Bienvenido a Nuestro Recorrido Virtual de la Facultad de Ingeniería URP!</h2>
+            <p>Somos un equipo de estudiantes dedicados a brindarte una experiencia única de exploración y descubrimiento de nuestra facultad desde cualquier lugar del mundo. Aquí en la Facultad de Ingeniería URP, nos enorgullecemos de ofrecer:</p>
+            <p>Innovación Educativa: Apostamos por una educación vanguardista, enfocada en el desarrollo integral del estudiante y la excelencia académica.</p>
+            <p>Experiencia Inmersiva: Sumérgete en nuestros laboratorios especializados, proyectos innovadores y espacios emblemáticos a través de nuestro recorrido virtual en 360 grados.</p>
+            <p>Enfoque Personalizado: Ofrecemos información detallada sobre programas académicos, vida estudiantil y oportunidades de desarrollo para ayudarte a tomar decisiones informadas sobre tu futuro académico.</p>
+            <p>Compromiso con la Comunidad: Nuestra facultad no es solo un lugar de estudio, es una comunidad vibrante y en constante evolución donde estudiantes y profesores colaboran en proyectos que impactan el mundo.</p>
+            <p> <span class="bold-green">¡Únete a nosotros y descubre lo que hace de la Facultad de Ingeniería URP un lugar excepcional para tu desarrollo académico y profesional!</span></p>
+            <img src="fotos/INGE.jpg" alt="Imagen de inicio" style="width: 100%; /*max-width: 800px;*/">
+        </section>
+        <section id="facultad">
+            <h2>Ingeniería Informática</h2>
+            <img width="1600" src="https://www.urp.edu.pe/img/thumbnails/zc/4/src/45185/n/banner-ingenieria-1.gif" alt="" style="width:100%;">
+            <p>Conoce nuestras diversas facultades y programas académicos.</p>
+            <p>La globalización y el empleo de la tecnología de punta forman parte de los temas de mayor interés del mundo moderno.</p>
+            <p>La Ingeniería Informática cumple un rol protagónico en este escenario, ya que es imposible hablar de globalización sin hablar de Internet, así como hablar de tecnología de punta sin hablar de Sistemas Informáticos; en resumen, el desarrollo del mundo contemporáneo gira en torno al desarrollo de la Computación y el Software. Las grandes innovaciones en medicina, biología, educación, negocios y en casi todo aspecto del quehacer humano, se producen gracias al desarrollo de los sistemas de información que permiten capturar, procesar y compartir la información y el conocimiento con cualquier persona del mundo, todo esto en tiempo real.</p>
+            <p>En este contexto, la Universidad Ricardo Palma, desde 1997 ofrece la carrera de Ingeniería Informática la que, sobre la base a una cultura de valores, viene formando sólidos profesionales orientados a satisfacer los retos que el mundo de hoy exige y que con gran facilidad se incorporan en posiciones estratégicas del mercado laboral, contribuyendo con sus propuestas innovadoras en el proceso de mejora continua de las organizaciones donde labore.</p>
+            <p>La Escuela de Ingeniería Informática también está acreditada por ICACIT y SINEACE. Estas acreditadoras aseguran y certifican la calidad de la formación profesional que se refleja a través de la pertinencia del plan de estudios, el reconocimiento y prestigio de la plana docente, la modernidad de los laboratorios y la empleabilidad de los egresados.</p>
+            <p>Invitamos a todos los que desean asumir el reto de ser Ingenieros Informáticos exitosos a incorporarse a la Escuela de Ingeniería Informática de la URP para que juntos logremos dicho propósito.</p>
+            <img src="Fotos/Richi.jpg" alt="Imagen de facultades" style="width: 100%; /*max-width: 600px;*/">
+        </section>
+        <section id="instalaciones" style="position: relative; overflow: hidden;">
+            <h2>Instalaciones</h2>
+            <div class="description">
+                <p>Visita nuestra instalacionas.</p>
+            <p>BIBLIOTECA CENTRAL</p>
+            <p>La Biblioteca Central, como entidad de respaldo esencial a las funciones de toda institución dedicada a la enseñanza y la investigación, empezó a brindar sus servicios en el año 1969, el mismo año de la creación de nuestra Universidad Ricardo Palma.</p>
+            <p>Desde entonces, su capital bibliográfico se ha ido enriqueciendo, no solo como respuesta a las demandas de las nuevas carreras que se han ido creando a lo largo de estos años, sino por constituirse en un centro de consultas de propios y extraños en los diversos campos de la ciencia y la cultura. De esta manera, nuestro legado para las futuras generaciones ya supera, en la actualidad a 81,088 libros, 6,948 anuarios, diccionarios y  enciclopedias, 7,171 tesis, 4730 revistas, 1,587 colecciones especiales donadas, registrados e ingresados en el sistema automatizado Absysnet, cifra que sin duda continuará incrementándose en los años venideros</p>
+            <p>En esta expansión del acervo bibliográfico, es digno de resaltar que nuestra biblioteca haya recibido el legado de libros y revistas de connotados personajes, que han donado sus bibliotecas personales como signo de agradecimiento a la universidad que les brindó la oportunidad de desplegar sus conocimientos y actividades intelectuales.</p>
+            <p>En este trascendente rol de apoyo a la formación de profesionales y productores de cultura, e investigadores, en un mundo actual, globalizado y regido por cada vez más complejos medios de comunicación y difusión del saber humano, nuestra biblioteca se está adaptando rápidamente a estas nuevas formas de difusión del saber, para lo cual cuenta con diferentes soportes, tanto físicos como digitales, y servicios de información en línea de excelente calidad, que permiten atender las necesidades de la comunidad universitaria. Así, entre otras acciones, desarrollamos permanentemente capacitaciones de manera presencial y vía plataforma Zoom.</p>
+            <p>Insertándonos de esta manera en el globalizado mundo de la información, esperamos no solo el contacto sino el intercambio cada vez mayor con las bibliotecas universitarias de nuestro país y del mundo.</p>
+            </div>
+            <div class="swiper-container" style="max-width: 800px; margin: 20px auto; position: relative;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca central.jpeg" alt="Imagen 1" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca central 1.jpeg" alt="Imagen 2" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca central 3.jpeg" alt="Imagen 2" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="swiper-button-next" style="position: absolute; top: 50%; right: 0;">
+                </div>
+                <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 0;">
+                </div>
+            </div>          
+            <p>LABORATORIO DE INFORMÁTICA Y CÓMPUTO</p>
+            <div class="description">
+                <P>El Laboratorio de Informática y Cómputo de la Facultad de Ingeniería es una dependencia de la Oficina Central de Informática y Cómputo (OFICIC), la tecnología que utilizan los diferentes ambientes del laboratorio son computadoras de última generación DELL y HP, equipos multimedia NEC, sistema de aire acondicionado centralizado LG; software especializado para las carreras de ingeniería; considerados como recursos necesarios para apoyar el desarrollo de competencias cognitivas, experimentales e investigables de nuestra comunidad universitaria.</P>
+            </div> 
+            <div class="swiper-container" style="max-width: 100%; margin: 0 auto; position: relative;">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo.jpeg" alt="Laboratorio - Imagen 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo 1.jpeg" alt="Laboratorio - Imagen 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo 2.jpeg" alt="Laboratorio - Imagen 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo 3.jpeg" alt="Laboratorio - Imagen 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo 4.jpeg" alt="Laboratorio - Imagen 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/lab-computo 5.jpeg" alt="Laboratorio - Imagen 6">
+                    </div>
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);"></div>
+                <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);"></div>
+            </div>
+        </section>
+        <section id="biblioteca-virtual" style="position: relative; overflow: hidden;">
+
+            <P>BIBLIOTECA VIRTUAL DE INGENIERÍA</P>
+            <div class="description">
+                <P>La Biblioteca Virtual de Ingeniería (BVI) fue creada gracias a la gestión de nuestras autoridades y depende directamente del Sr. Decano de la Facultad de Ingeniería, Dr. Ing. Santiago Fidel Rojas Tuya.</P>
+            <P>Tiene como visión estar dentro de las mejores Bibliotecas universitarias del mundo, su misión es proveer recursos de calidad y servicios de información actualizada en Internet, a profesores, alumnos, egresados y post graduados de Ingeniería así como, intercambiar información con otras Bibliotecas Virtuales a nivel Nacional e Internacional.</P>
+            <P>Contamos con las prestigiosas Bases de Datos ProQuest, ACM, Elsevier, Hemeroteca IDG, E-Libro, Eolss y Scirus con documentos a texto completo almacenados en formatos HTML y PDF. Para cada una de las 5 Escuelas profesionales de Ingeniería Civil, Electrónica, Industrial, Informática y Mecatrónica se cuenta con planes de estudios, sílabus, exámenes, directorio de docentes. Asi mismo se puede acceder a enciclopedias, buscadores, traductores, diccionarios, maestrías, doctorados, publicaciones, cursos online, entre los principales servicios.</P>
+            </div>
+            <div class="swiper-container" style="max-width: 800px; margin: 20px auto; position: relative;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 1.jpeg" alt="Imagen 1" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 2.jpeg" alt="Imagen 2" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 3.jpeg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 4.jpeg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 5.jpeg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual 6.jpeg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/biblioteca virtual.jpeg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);"></div>
+                <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);"></div>
+            </div>
+            <p>ANFITEATRO</p>
+            <div class="description">
+                <p>El Anfiteatro de la Universidad Ricardo Palma es un espacio emblemático que fusiona la arquitectura moderna con la funcionalidad para albergar eventos académicos, culturales y recreativos. Ubicado estratégicamente dentro del campus, este espacio es un centro neurálgico para diversas actividades que enriquecen la vida universitaria.</p>
+                <div class="swiper-container" style="max-width: 800px; margin: 20px auto; position: relative;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Fotos/Anfiteatro.jpg" alt="Imagen 1" style="width: 100%; height: auto;">
+                        </div>
+                    </div>
+                    <!-- Flechas de navegación -->
+                    <div class="swiper-button-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);"></div>
+                    <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);"></div>
+                </div>
+            <P>POLICLÍNICO</P>
+            <div class="description">
+                <p>El Policlínico de la Universidad Ricardo Palma es un centro médico integral ubicado en la Facultad de Medicina Humana, dedicado a brindar servicios de salud de calidad a la comunidad universitaria y al público en general. Este espacio ofrece atención médica, consultas especializadas y servicios complementarios para promover el bienestar y la salud de quienes lo visitan. Es un componente vital dentro del campus universitario, proporcionando servicios médicos especializados y fomentando un enfoque proactivo hacia la salud entre los estudiantes, el personal académico y la comunidad externa.</p>
+            </div>
+            <div class="swiper-container" style="max-width: 800px; margin: 20px auto; position: relative;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Fotos/policlinico 1.jpg" alt="Imagen 1" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/policlinico 2.jpg" alt="Imagen 2" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/policlinico 3.jpg" alt="Imagen 3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Fotos/policlinico 4.jpg" alt="Imagen 4" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);"></div>
+                <div class="swiper-button-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);"></div>
+            </div>
+        </section>
+<script>
+    // Carrusel para BIBLIOTECA CENTRAL
+    var swiperBibliotecaCentral = new Swiper('#biblioteca-central-carousel', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#biblioteca-central-carousel .swiper-button-next',
+            prevEl: '#biblioteca-central-carousel .swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Carrusel para BIBLIOTECA VIRTUAL
+    var swiperBibliotecaVirtual = new Swiper('#biblioteca-virtual', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Carrusel para LABORATORIO DE INFORMÁTICA Y CÓMPUTO
+    var swiperLaboratorio = new Swiper('#laboratorio-carousel', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#laboratorio-carousel .swiper-button-next',
+            prevEl: '#laboratorio-carousel .swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Carrusel para BIBLIOTECA VIRTUAL DE INGENIERÍA
+    var swiperBibliotecaVirtual = new Swiper('#biblioteca-virtual .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#biblioteca-virtual .swiper-button-next',
+            prevEl: '#biblioteca-virtual .swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Carrusel para ANFITEATRO
+    var swiperAnfiteatro = new Swiper('#anfiteatro .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#anfiteatro .swiper-button-next',
+            prevEl: '#anfiteatro .swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // Carrusel para POLICLÍNICO
+    var swiperPoliclinico = new Swiper('#policlinico .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '#policlinico .swiper-button-next',
+            prevEl: '#policlinico .swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+        <section id="Tour">
+            <h2>Tour 360°</h2>
+            <p>Descubre nuestra Facultad en otra dimensión</p>
+    
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Quieres más información? Contáctanos.</p>
+            <p>Escuela de Ingeniería Informática</p>
+            <p>Manchego Quijano Jorge Martin</p>
+            <p>Mérida Núñez José Gabriel</p>
+            <p>Monteza Mogollón Fidel Tomás</p>
+            <p>Estudiantes de Ingeniería Informática</p>
+            <p>202110494@urp.edu.pe | 202020574@urp.edu.pe | 202012370@urp.edu.pe </p>
+            <P>922 402 449 | 920664135 | 931 855 058</P>
+        </section>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true, 
+            autoplay: {
+                delay: 1000, 
+                disableOnInteraction: false, 
+            },
+        });
+    </script>
+    
+    <footer style="position: relative; bottom: 0;">
+        <p>&copy; 2023 Universidad Ricardo Palma</p>
+    </footer>
+</body>
+</html>
